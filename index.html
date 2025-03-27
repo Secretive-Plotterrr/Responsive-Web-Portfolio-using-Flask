@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <img src="static/images/Logo.jpg" alt="Logo" class="navbar-logo">
+            <h1>Voidstack</h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" title="Toggle navigation menu">
+            <label for="nav-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <img src="static/images/pfp.png" alt="Profile Image" class="hero-image">
+            <div class="hero-text">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Hi, I’m Rico Villamin, a passionate Web Developer creating impactful solutions.</p>
+                <a href="static/pdfs/cv.pdf" class="btn" download="Rico_Villamin_CV.pdf">Download CV</a>
+                <div class="social-links">
+                    <a href="https://github.com/Secretive-Plotterrr" target="_blank" rel="noopener" class="social-icon" title="Visit my GitHub profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rico-villamin-51072233b/" target="_blank" rel="noopener" class="social-icon" title="Visit my LinkedIn profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/cosmoaintsimpp" target="_blank" rel="noopener" class="social-icon" title="Visit my Facebook profile">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/secretive_plotterrr/" target="_blank" rel="noopener" class="social-icon" title="Visit my Instagram profile">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-box about-description">
+            <p>Hi! I'm Rico Villamin, an enthusiastic web developer currently honing my craft at Mabini Colleges Daet. With 4 months of hands-on experience, I thrive on creating dynamic, user-friendly web applications. My specialties include HTML, CSS, Java, JavaScript, and React, where I blend creativity and code to bring ideas to life.</p>
+        </div>
+        <div class="about-box about-skills">
+            <h3>Skills</h3>
+            <p>React, HTML, CSS, Javascript, Java, Python, SQL</p>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates" class="certificates">
+        <h2>Certificates</h2>
+        <div class="cert-container">
+            <div class="cert-box">
+                <img src="static/images/certificate.1.jpg" alt="Certificate 1" class="cert-image" onclick="enlargeImage(this)">
+                <h1>Certificate 1</h1>
+                <a href="static/images/certificate.1.jpg" class="cert-download-btn" download="Certificate_1.jpg">Download</a>
+            </div>
+            <div class="cert-box">
+                <img src="static/images/certificate.2.jpg" alt="Certificate 2" class="cert-image" onclick="enlargeImage(this)">
+                <h1>Certificate 2</h1>
+                <a href="static/images/certificate.2.jpg" class="cert-download-btn" download="Certificate_2.jpg">Download</a>
+            </div>
+        </div>
+        <!-- Modal for enlarged image -->
+        <div id="imageModal" class="modal">
+            <span class="close-btn" onclick="closeImage()">×</span>
+            <img id="enlargedImg" class="modal-content" alt="Enlarged Certificate">
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-card">
+                <img src="static/images/project1.png" alt="Project 1" class="project-image">
+                <h3>Project 1</h3>
+                <p>Tic-Tac-Toe, a game made of javascript.</p>
+                <div class="project-buttons">
+                    <a href="https://github.com/Secretive-Plotterrr/Tic-Tac-Toe" target="_blank" class="view-btn" rel="noopener">View</a>
+                    <a href="https://secretive-plotterrr.github.io/Tic-Tac-Toe/" target="_blank" class="demo-btn" rel="noopener">Live Demo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="static/images/project2.png" alt="Project 2" class="project-image">
+                <h3>Project 2</h3>
+                <p>Responsive React Web Portfolio.</p>
+                <div class="project-buttons">
+                    <a href="https://github.com/Secretive-Plotterrr/Web-Portfolio" target="_blank" class="view-btn" rel="noopener">View</a>
+                    <a href="https://secretive-plotterrr.github.io/Web-Portfolio/" target="_blank" class="demo-btn" rel="noopener">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: ricovillamin75@gmail.com</p>
+        <p>Phone: +63 963-005-2901</p>
+        <div id="flash-messages"></div> <!-- For success/error messages -->
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© <span id="current-year">2025</span> Voidstack. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/Secretive-Plotterrr" target="_blank" rel="noopener" class="social-icon" title="Visit my GitHub profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rico-villamin-51072233b/" target="_blank" rel="noopener" class="social-icon" title="Visit my LinkedIn profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/cosmoaintsimpp" target="_blank" rel="noopener" class="social-icon" title="Visit my Facebook profile">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/secretive_plotterrr/" target="_blank" rel="noopener" class="social-icon" title="Visit my Instagram profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("xrnBHs7vfirju4-Gl"); // Your EmailJS Public Key
+        })();
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create params object with the form data
+            const params = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                reply_to: email
+            };
+
+            emailjs.send('service_y4706jh', 'template_v3nydjo', params)
+                .then(function(response) {
+                    // Success notification
+                    document.getElementById('flash-messages').innerHTML = `
+                        <div class="flash success">
+                            Message sent successfully!<br>
+                            From: ${name} (${email})
+                        </div>`;
+                    document.getElementById('contact-form').reset(); // Reset form
+                    setTimeout(() => {
+                        document.getElementById('flash-messages').innerHTML = '';
+                    }, 5000); // Clear after 5 seconds
+                }, function(error) {
+                    // Error notification
+                    document.getElementById('flash-messages').innerHTML = `
+                        <div class="flash error">
+                            Failed to send message: ${error.text}<br>
+                            Please try again or contact directly at ricovillamin75@gmail.com
+                        </div>`;
+                });
+        });
+    </script>
+    <script>
+        // Navbar toggle functionality
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelectorAll('.navbar ul a');
+
+        // Close menu when a nav link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.checked = false;
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const navbar = document.querySelector('.navbar');
+            if (!navbar.contains(e.target) && navToggle.checked) {
+                navToggle.checked = false;
+            }
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
