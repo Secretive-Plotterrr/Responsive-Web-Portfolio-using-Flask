@@ -96,7 +96,7 @@
         <h2>Projects</h2>
         <div class="project-container">
             <div class="project-card">
-                <img src="static/images/project1.png" alt="Project 1" class="project-image">
+                <img src="static/images/project1.png" alt="Project 1" class="project-image" onclick="enlargeImage(this)">
                 <h3>Project 1</h3>
                 <p>Tic-Tac-Toe, a game made of javascript.</p>
                 <div class="project-buttons">
@@ -105,7 +105,7 @@
                 </div>
             </div>
             <div class="project-card">
-                <img src="static/images/project2.png" alt="Project 2" class="project-image">
+                <img src="static/images/project2.png" alt="Project 2" class="project-image" onclick="enlargeImage(this)">
                 <h3>Project 2</h3>
                 <p>Responsive React Web Portfolio.</p>
                 <div class="project-buttons">
@@ -228,6 +228,19 @@
 
         // Update current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Image enlargement functions
+        function enlargeImage(img) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("enlargedImg");
+            modal.style.display = "flex"; /* Changed to flex for centering */
+            modalImg.src = img.src;
+        }
+
+        function closeImage() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
     </script>
 </body>
 </html>

@@ -119,7 +119,7 @@ body {
 
 .hero-image {
     width: 100%;
-    max-width: 200px; /* Increased from 150px */
+    max-width: 300px; /* Increased from 150px */
     height: auto;
     border-radius: 50%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -323,31 +323,37 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: #333;
     display: flex;
-    flex-direction: column; /* Stack image, text, and buttons vertically */
-    align-items: center; /* Center contents horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 .project-image {
-    width: 100%; /* Responsive image width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Match card rounding */
-    margin-bottom: 1rem; /* Space between image and text */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer; /* Indicate clickability */
+    transition: transform 0.2s ease; /* Smooth zoom effect */
+}
+
+.project-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover, like certificates */
 }
 
 .project-card h3 {
     font-size: 1.5rem;
-    margin: 0.5rem 0; /* Tighten spacing */
+    margin: 0.5rem 0;
 }
 
 .project-card p {
     font-size: 1rem;
-    margin: 0.5rem 0; /* Consistent spacing */
+    margin: 0.5rem 0;
 }
 
 .project-buttons {
     display: flex;
-    gap: 0.5rem; /* Space between buttons */
-    margin-top: 1rem; /* Space above buttons */
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .view-btn, .demo-btn {
@@ -356,25 +362,25 @@ body {
     text-decoration: none;
     border-radius: 3px;
     font-size: 1rem;
-    transition: background 0.3s ease; /* Smooth hover effect */
+    transition: background 0.3s ease;
 }
 
 .view-btn {
-    background: #333; /* Dark color for View button */
+    background: #333;
     color: #fff;
 }
 
 .view-btn:hover {
-    background: #555; /* Lighter shade on hover */
+    background: #555;
 }
 
 .demo-btn {
-    background:  rgb(26, 24, 24); /* Blue color for Live Demo button */
+    background: rgb(26, 24, 24);
     color: #fff;
 }
 
 .demo-btn:hover {
-    background: gray; /* Darker blue on hover */
+    background: gray;
 }
 
 /* Contact */
