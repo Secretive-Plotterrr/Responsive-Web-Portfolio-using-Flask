@@ -156,124 +156,43 @@ body {
 }
 
 /* About */
-/* General Styling for About Section */
 .about {
     background: #F5F5F5;
-    min-height: 70vh; /* Ensures enough vertical space */
-    padding: 2rem; /* Breathing room */
-    max-width: 1200px; /* Limits width */
-    margin: 0 auto; /* Centers section */
-    text-align: center; /* Centers text by default */
+    min-height: 70vh; /* Sets a minimum height to ensure the section has enough space */
     display: flex;
-    flex-direction: column; /* Stacks content vertically by default */
-    align-items: center; /* Centers horizontally */
-    justify-content: center; /* Centers vertically */
+    flex-direction: column; /* Stacks h2 and boxes vertically */
+    align-items: center; /* Centers content horizontally (left-right) */
+    justify-content: center; /* Centers content vertically (up-down) within the section */
+    padding: 2rem; /* Adds padding around the content for breathing room */
+    text-align: center; /* Ensures text inside is centered */
+}
+
+.about-box {
+    background: #FFFFFF; /* White box background */
+    padding: 1.5rem; /* Slightly reduced padding for compactness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Limits box width for readability */
+    width: 100%; /* Ensures responsiveness */
+    margin-top: 1rem; /* Adds space between elements above and below */
 }
 
 .about h2 {
     font-size: 2rem;
     color: #333;
-    margin-bottom: 0; /* Tight spacing */
+    margin-bottom: 0; /* Removes default margin to keep spacing tight */
 }
 
 .about p {
     font-size: 1.1rem;
     color: #333;
-    margin: 0; /* Snug fit */
-}
-
-.about-box {
-    background: #FFFFFF; /* White background */
-    padding: 1.5rem; /* Compact padding */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 600px; /* Limits width */
-    width: 100%; /* Responsive */
-    margin-top: 1rem; /* Space above */
+    margin: 0; /* Removes default paragraph margin for a snug fit */
 }
 
 .about-skills h3 {
-    font-size: 1.5rem; /* Hierarchy */
+    font-size: 1.5rem; /* Slightly smaller than h2 for hierarchy */
     color: #333;
-    margin-bottom: 0.5rem; /* Space below */
-}
-
-/* Image Container Styling */
-.image-container {
-    background-color: #fff; /* White background */
-    padding: 10px; /* Padding inside */
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease; /* Smooth interactivity */
-}
-
-/* Image Styling */
-.interactive-img {
-    max-width: 100%; /* Responsive */
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-/* Interactivity */
-.image-container:hover {
-    transform: scale(1.05); /* Zoom on hover */
-}
-
-/* Desktop Layout: Image to the left of description */
-@media (min-width: 769px) {
-    .about {
-        flex-direction: row; /* Side-by-side layout */
-        flex-wrap: wrap; /* Allows wrapping */
-        align-items: flex-start; /* Align tops */
-        justify-content: center; /* Center horizontally */
-    }
-
-    .image-box.about-image {
-        order: 1; /* Image first */
-        flex: 0 0 30%; /* ~30% width */
-        margin-right: 20px; /* Space to description */
-        margin-top: 1rem; /* Align with about-box spacing */
-        max-width: none; /* Override any max-width */
-    }
-
-    .about-box.about-description {
-        order: 2; /* Description second */
-        flex: 1; /* Takes remaining space */
-        max-width: 600px; /* Consistent with other boxes */
-    }
-
-    .about-box.about-skills {
-        order: 3; /* Skills below */
-        width: 100%; /* Full width */
-        max-width: 600px; /* Consistent with description */
-    }
-}
-
-/* Mobile Layout: Stack image above all boxes */
-@media (max-width: 768px) {
-    .about {
-        display: flex; /* Keep flex for centering */
-        flex-direction: column; /* Stack vertically */
-    }
-
-    .image-box.about-image {
-        width: 100%; /* Full width */
-        margin-bottom: 20px; /* Space below */
-        text-align: center; /* Center image */
-        margin-top: 0; /* Reset top margin */
-    }
-
-    .image-container {
-        margin: 0 auto; /* Center image container */
-        max-width: 300px; /* Limit image width */
-    }
-
-    .about-box.about-description,
-    .about-box.about-skills {
-        width: 100%; /* Full width */
-        max-width: 600px; /* Consistent with desktop */
-    }
+    margin-bottom: 0.5rem; /* Space between h3 and skills list */
 }
 
 /* Certificates */
