@@ -195,6 +195,69 @@ body {
     margin-bottom: 0.5rem; /* Space between h3 and skills list */
 }
 
+/* Skills List Styling */
+.skills-list {
+    text-align: left; /* Aligns text to the left for better readability */
+}
+
+/* Skill Item Styling */
+.skill-item {
+    margin-bottom: 1rem; /* Space between each skill */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between skill name and progress bar */
+}
+
+.skill-item span {
+    font-size: 1.1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 20px; /* Height of the progress bar */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 10px; /* Rounded edges */
+    overflow: hidden; /* Ensures the progress stays within bounds */
+}
+
+.progress {
+    height: 100%;
+    background-color: #4caf50; /* Green fill, adjust color as needed */
+    border-radius: 10px; /* Matches container */
+    transition: width 0.5s ease-in-out; /* Smooth animation if width changes */
+}
+
+.progress-percent {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #333; /* Dark text for contrast */
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skill-item {
+        margin-bottom: 0.8rem; /* Slightly less space on mobile */
+    }
+
+    .progress-bar {
+        height: 18px; /* Slightly smaller on mobile */
+    }
+
+    .progress-percent {
+        font-size: 0.8rem; /* Smaller text on mobile */
+    }
+}
+
 /* Certificates */
 .certificates {
     background: #D3D3D3;
