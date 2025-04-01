@@ -11,8 +11,8 @@
     <!-- Navbar -->
     <header class="navbar">
         <div class="navbar-content">
-            <img src="static/images/aboutpic.png" alt="Logo" class="navbar-logo">
-            <h1>CodeKnight</h1>
+            <img src="static/images/Logo.jpg" alt="Logo" class="navbar-logo">
+            <h1>Voidstack</h1>
             <input type="checkbox" id="nav-toggle" class="nav-toggle" title="Toggle navigation menu">
             <label for="nav-toggle" class="hamburger">
                 <span></span>
@@ -56,68 +56,34 @@
             </div>
         </div>
     </section>
-<!-- About -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <div class="about-box about-description">
-        <p>
-            Hi! I'm Rico Villamin, an enthusiastic web developer currently honing my craft at
-            Mabini Colleges Daet. With 4 months of hands-on experience, I thrive on creating dynamic, user-friendly web applications. My specialties include 
-            HTML, 
-            CSS, 
-            Java, 
-            JavaScript, and 
-            React, where I blend creativity and code to bring ideas to life.
-        </p>
-    </div>
-    <div class="about-box about-skills">
-        <h3>Skills</h3>
-        <div class="skills-list">
-            <div class="skill-item">
-                <span><i class="fab fa-react"></i> React</span>
-                <div class="progress-bar w3-light-grey">
-                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="85%">85%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span><i class="fab fa-html5"></i> HTML</span>
-                <div class="progress-bar w3-light-grey">
-                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="90%">90%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span><i class="fab fa-css3-alt"></i> CSS</span>
-                <div class="progress-bar w3-light-grey">
-                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="80%">80%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span><i class="fab fa-js"></i> JavaScript</span>
-                <div class="progress-bar w3-light-grey">
-                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="75%">75%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span><i class="fas fa-coffee"></i> Java</span>
-                <div class="progress-bar w3-light-grey">
-                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="70%">70%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span><i class="fab fa-python"></i> Python</span>
-                <div class="progress-bar w3-light-grey">
-                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="65%">65%</div>
-                </div>
-            </div>
-            <div class="skill-item">
-                <span><i class="fas fa-database"></i> SQL</span>
-                <div class="progress-bar w3-light-grey">
-                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="60%">60%</div>
-                </div>
-            </div>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-box about-description">
+            <p>
+                Hi! I'm Rico Villamin, an enthusiastic web developer currently honing my craft at
+                Mabini Colleges Daet. With 4 months of hands-on experience, I thrive on creating dynamic, user-friendly web applications. My specialties include 
+                 HTML, 
+                 CSS, 
+                 Java, 
+                 JavaScript, and 
+                React, where I blend creativity and code to bring ideas to life.
+            </p>
         </div>
-    </div>
-</section>
+        <div class="about-box about-skills">
+            <h3>Skills</h3>
+            <p>
+                <i class="fab fa-react"></i> React, 
+                <i class="fab fa-html5"></i> HTML, 
+                <i class="fab fa-css3-alt"></i> CSS, 
+                <i class="fab fa-js"></i> JavaScript, 
+                <i class="fas fa-coffee"></i> Java, 
+                <i class="fab fa-python"></i> Python, 
+                <i class="fas fa-database"></i> SQL
+            </p>
+        </div>
+    </section>    
 
     <!-- Certificates -->
     <section id="certificates" class="certificates">
@@ -219,7 +185,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© <span id="current-year">2025</span> CodeKnight. All rights reserved.</p>
+            <p>© <span id="current-year">2025</span> Voidstack. All rights reserved.</p>
             <div class="social-links">
                 <a href="https://github.com/Secretive-Plotterrr" target="_blank" rel="noopener" class="social-icon" title="Visit my GitHub profile">
                     <i class="fab fa-github"></i>
@@ -319,16 +285,5 @@
             modal.style.display = "none";
         }
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const progresses = document.querySelectorAll(".progress");
-            progresses.forEach(progress => {
-                const targetWidth = progress.getAttribute("data-width");
-                setTimeout(() => {
-                    progress.style.width = targetWidth; /* Animate to target width */
-                }, 100); /* Small delay to ensure visibility */
-            });
-        });
-        </script>
 </body>
 </html>

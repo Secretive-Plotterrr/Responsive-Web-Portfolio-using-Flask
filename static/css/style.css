@@ -155,56 +155,44 @@ body {
     background: #1d1b1b;
 }
 
-/* Skills List Styling */
-.skills-list {
-    text-align: left; /* Aligns text to the left */
-}
-
-/* Skill Item Styling */
-.skill-item {
-    margin-bottom: 1rem; /* Space between skills */
+/* About */
+.about {
+    background: #F5F5F5;
+    min-height: 70vh; /* Sets a minimum height to ensure the section has enough space */
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem; /* Space between name and bar */
+    flex-direction: column; /* Stacks h2 and boxes vertically */
+    align-items: center; /* Centers content horizontally (left-right) */
+    justify-content: center; /* Centers content vertically (up-down) within the section */
+    padding: 2rem; /* Adds padding around the content for breathing room */
+    text-align: center; /* Ensures text inside is centered */
 }
 
-.skill-item span {
+.about-box {
+    background: #FFFFFF; /* White box background */
+    padding: 1.5rem; /* Slightly reduced padding for compactness */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Limits box width for readability */
+    width: 100%; /* Ensures responsiveness */
+    margin-top: 1rem; /* Adds space between elements above and below */
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0; /* Removes default margin to keep spacing tight */
+}
+
+.about p {
     font-size: 1.1rem;
     color: #333;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* Space between icon and text */
+    margin: 0; /* Removes default paragraph margin for a snug fit */
 }
 
-/* Progress Bar Styling (Inspired by W3.CSS) */
-.w3-light-grey {
-    width: 100%;
-    height: 25px; /* Slightly taller bar */
-    background-color: #f1f1f1; /* Light grey background */
-    border-radius: 5px; /* Rounded corners */
-    overflow: hidden; /* Contain the progress */
-}
-
-.w3-container.w3-black {
-    height: 100%;
-    background-color: #000000; /* Black fill */
-    color: #fff; /* White text for contrast */
-    text-align: center;
-    line-height: 25px; /* Vertically center text */
-    border-radius: 5px; /* Match container */
-    transition: width 1.5s ease-in-out; /* Animation for width */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .w3-light-grey {
-        height: 20px; /* Slightly smaller on mobile */
-    }
-
-    .w3-container.w3-black {
-        line-height: 20px; /* Adjust for smaller height */
-        font-size: 0.9rem; /* Smaller text on mobile */
-    }
+.about-skills h3 {
+    font-size: 1.5rem; /* Slightly smaller than h2 for hierarchy */
+    color: #333;
+    margin-bottom: 0.5rem; /* Space between h3 and skills list */
 }
 
 /* Certificates */
