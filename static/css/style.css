@@ -155,57 +155,86 @@ body {
     background: #1d1b1b;
 }
 
-/* About */
+/* About Section Styling */
 .about {
     background: #F5F5F5;
-    min-height: 70vh; /* Sets a minimum height to ensure the section has enough space */
+    min-height: 70vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* About Content Flex Container */
+.about-content {
     display: flex;
-    flex-direction: column; /* Stacks h2 and boxes vertically */
-    align-items: center; /* Centers content horizontally (left-right) */
-    justify-content: center; /* Centers content vertically (up-down) within the section */
-    padding: 2rem; /* Adds padding around the content for breathing room */
-    text-align: center; /* Ensures text inside is centered */
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px; /* Space between image and text */
 }
 
+/* Image Wrapper */
+.image-wrapper {
+    flex: 0 0 30%; /* ~30% width for image */
+    max-width: 300px; /* Limit image width */
+    text-align: center;
+}
+
+.about-pic {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.5s ease; /* For interactivity and fade-in */
+}
+
+/* Interactivity for Image */
+.interactive-img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease forwards; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade to fully visible */
+    }
+}
+
+/* Text Wrapper */
+.text-wrapper {
+    flex: 1; /* Takes remaining space */
+    max-width: 600px; /* Consistent with about-box */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between description and skills */
+}
+
+/* About Box Styling */
 .about-box {
-    background: #FFFFFF; /* White box background */
-    padding: 1.5rem; /* Slightly reduced padding for compactness */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 600px; /* Limits box width for readability */
-    width: 100%; /* Ensures responsiveness */
-    margin-top: 1rem; /* Adds space between elements above and below */
-}
-
-.about h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 0; /* Removes default margin to keep spacing tight */
-}
-
-.about p {
-    font-size: 1.1rem;
-    color: #333;
-    margin: 0; /* Removes default paragraph margin for a snug fit */
-}
-
-.about-skills h3 {
-    font-size: 1.5rem; /* Slightly smaller than h2 for hierarchy */
-    color: #333;
-    margin-bottom: 0.5rem; /* Space between h3 and skills list */
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: left; /* Align text left within boxes */
 }
 
 /* Skills List Styling */
 .skills-list {
-    text-align: left; /* Aligns text to the left */
+    text-align: left;
 }
 
-/* Skill Item Styling */
 .skill-item {
-    margin-bottom: 1rem; /* Space between skills */
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Space between name and bar */
+    gap: 0.5rem;
 }
 
 .skill-item span {
@@ -213,37 +242,53 @@ body {
     color: #333;
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Space between icon and text */
+    gap: 0.5rem;
 }
 
-/* Progress Bar Styling (Inspired by W3.CSS) */
+/* Progress Bar Styling */
 .w3-light-grey {
     width: 100%;
-    height: 25px; /* Slightly taller bar */
-    background-color: #f1f1f1; /* Light grey background */
-    border-radius: 5px; /* Rounded corners */
-    overflow: hidden; /* Contain the progress */
+    height: 25px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .w3-container.w3-black {
     height: 100%;
-    background-color: #000000; /* Black fill */
-    color: #fff; /* White text for contrast */
+    background-color: #000000;
+    color: #fff;
     text-align: center;
-    line-height: 25px; /* Vertically center text */
-    border-radius: 5px; /* Match container */
-    transition: width 1.5s ease-in-out; /* Animation for width */
+    line-height: 25px;
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out; /* Animation */
 }
 
-/* Responsive Adjustments */
+/* Mobile Layout */
 @media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-wrapper {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .text-wrapper {
+        max-width: 100%;
+    }
+
     .w3-light-grey {
-        height: 20px; /* Slightly smaller on mobile */
+        height: 20px;
     }
 
     .w3-container.w3-black {
-        line-height: 20px; /* Adjust for smaller height */
-        font-size: 0.9rem; /* Smaller text on mobile */
+        line-height: 20px;
+        font-size: 0.9rem;
     }
 }
 
