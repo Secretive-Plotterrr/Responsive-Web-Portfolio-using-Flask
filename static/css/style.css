@@ -155,46 +155,6 @@ body {
     background: #1d1b1b;
 }
 
-/* About */
-.about {
-    background: #F5F5F5;
-    min-height: 70vh; /* Sets a minimum height to ensure the section has enough space */
-    display: flex;
-    flex-direction: column; /* Stacks h2 and boxes vertically */
-    align-items: center; /* Centers content horizontally (left-right) */
-    justify-content: center; /* Centers content vertically (up-down) within the section */
-    padding: 2rem; /* Adds padding around the content for breathing room */
-    text-align: center; /* Ensures text inside is centered */
-}
-
-.about-box {
-    background: #FFFFFF; /* White box background */
-    padding: 1.5rem; /* Slightly reduced padding for compactness */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    max-width: 600px; /* Limits box width for readability */
-    width: 100%; /* Ensures responsiveness */
-    margin-top: 1rem; /* Adds space between elements above and below */
-}
-
-.about h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 0; /* Removes default margin to keep spacing tight */
-}
-
-.about p {
-    font-size: 1.1rem;
-    color: #333;
-    margin: 0; /* Removes default paragraph margin for a snug fit */
-}
-
-.about-skills h3 {
-    font-size: 1.5rem; /* Slightly smaller than h2 for hierarchy */
-    color: #333;
-    margin-bottom: 0.5rem; /* Space between h3 and skills list */
-}
-
 /* Skills List Styling */
 .skills-list {
     text-align: left; /* Aligns text to the left */
@@ -232,7 +192,7 @@ body {
     text-align: center;
     line-height: 25px; /* Vertically center text */
     border-radius: 5px; /* Match container */
-    transition: width 2.5s ease-in-out; /* Animation for width */
+    transition: width 1.5s ease-in-out; /* Animation for width */
 }
 
 /* Responsive Adjustments */
