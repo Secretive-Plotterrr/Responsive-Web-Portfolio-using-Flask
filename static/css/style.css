@@ -214,6 +214,65 @@ body {
     gap: 0.75rem; /* Spacing between skill items */
 }
 
+.progress-bar {
+    background-color: #333; /* Dark grey background */
+    height: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: #000; /* Black fill */
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 5px;
+    width: 0; /* Start at 0 for animation */
+}
+
+/* Animation keyframes for different widths */
+@keyframes load90 {
+    from { width: 0; }
+    to { width: 90%; }
+}
+
+@keyframes load85 {
+    from { width: 0; }
+    to { width: 85%; }
+}
+
+@keyframes load80 {
+    from { width: 0; }
+    to { width: 80%; }
+}
+
+@keyframes load75 {
+    from { width: 0; }
+    to { width: 75%; }
+}
+
+@keyframes load70 {
+    from { width: 0; }
+    to { width: 70%; }
+}
+
+@keyframes load65 {
+    from { width: 0; }
+    to { width: 65%; }
+}
+
+@keyframes load60 {
+    from { width: 0; }
+    to { width: 60%; }
+}
+
+/* Ensure icons and text align nicely */
+.skills-list p {
+    margin-bottom: 5px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about {
