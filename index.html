@@ -76,51 +76,44 @@
         <div class="skills-list">
             <div class="skill-item">
                 <span><i class="fab fa-react"></i> React</span>
-                <div class="progress-bar">
-                    <div class="progress progress-react"></div>
-                    <span class="progress-percent">85%</span>
+                <div class="progress-bar w3-light-grey">
+                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="60%">60%</div>
                 </div>
             </div>
             <div class="skill-item">
                 <span><i class="fab fa-html5"></i> HTML</span>
-                <div class="progress-bar">
-                    <div class="progress progress-html"></div>
-                    <span class="progress-percent">90%</span>
+                <div class="progress-bar w3-light-grey">
+                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="80%">80%</div>
                 </div>
             </div>
             <div class="skill-item">
                 <span><i class="fab fa-css3-alt"></i> CSS</span>
-                <div class="progress-bar">
-                    <div class="progress progress-css"></div>
-                    <span class="progress-percent">80%</span>
+                <div class="progress-bar w3-light-grey">
+                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="70%">70%</div>
                 </div>
             </div>
             <div class="skill-item">
                 <span><i class="fab fa-js"></i> JavaScript</span>
-                <div class="progress-bar">
-                    <div class="progress progress-js"></div>
-                    <span class="progress-percent">75%</span>
+                <div class="progress-bar w3-light-grey">
+                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="60%">60%</div>
                 </div>
             </div>
             <div class="skill-item">
                 <span><i class="fas fa-coffee"></i> Java</span>
-                <div class="progress-bar">
-                    <div class="progress progress-java"></div>
-                    <span class="progress-percent">70%</span>
+                <div class="progress-bar w3-light-grey">
+                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="50%">50%</div>
                 </div>
             </div>
             <div class="skill-item">
                 <span><i class="fab fa-python"></i> Python</span>
-                <div class="progress-bar">
-                    <div class="progress progress-python"></div>
-                    <span class="progress-percent">65%</span>
+                <div class="progress-bar w3-light-grey">
+                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="30%">30%</div>
                 </div>
             </div>
             <div class="skill-item">
                 <span><i class="fas fa-database"></i> SQL</span>
-                <div class="progress-bar">
-                    <div class="progress progress-sql"></div>
-                    <span class="progress-percent">60%</span>
+                <div class="progress-bar w3-light-grey">
+                    <div class="progress w3-container w3-black w3-center" style="width: 0;" data-width="30%">30%</div>
                 </div>
             </div>
         </div>
@@ -327,5 +320,16 @@
             modal.style.display = "none";
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const progresses = document.querySelectorAll(".progress");
+            progresses.forEach(progress => {
+                const targetWidth = progress.getAttribute("data-width");
+                setTimeout(() => {
+                    progress.style.width = targetWidth; /* Animate to target width */
+                }, 100); /* Small delay to ensure visibility */
+            });
+        });
+        </script>
 </body>
 </html>
