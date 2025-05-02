@@ -648,6 +648,10 @@ body {
     border: 1px solid #ebccd1;
 }
 
+.navbar nav ul li a.active::after {
+    background-color: #000 !important;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .navbar ul {

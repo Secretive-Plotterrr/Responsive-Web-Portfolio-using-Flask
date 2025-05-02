@@ -6,6 +6,53 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Navbar link styles */
+        .navbar nav ul li a {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Underline effect for active link */
+        .navbar nav ul li a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000; /* Adjust color to match your design */
+            transform: scaleX(1);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        .navbar nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        .navbar nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Ensure hamburger menu doesn't interfere */
+        @media (max-width: 768px) {
+            .navbar nav ul li a.active::after {
+                bottom: -2px;
+                height: 1px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -21,7 +68,7 @@
             </label>
             <nav>
                 <ul>
-                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#hero" class="active" aria-current="page">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#certificates">Certificates</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -58,61 +105,55 @@
     </section>
 
     <!-- About -->
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-        <div class="about-box about-description">
-            <p>
-                Hi! I'm Rico Villamin, an enthusiastic web developer currently honing my craft at
-                Mabini Colleges Daet. With 4 months of hands-on experience, I thrive on creating dynamic, user-friendly web applications. My specialties include 
-                HTML, 
-                CSS, 
-                Java, 
-                JavaScript, and 
-                React, where I blend creativity and code to bring ideas to life.
-            </p>
-        </div>
-        <div class="about-box about-skills">
-            <h3>Skills</h3>
-            <div class="skills-list">
-                <p><i class="fab fa-react"></i> React</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 70%; animation: load85 1.5s ease-in-out forwards;">70%</div>
-                </div>
-                
-                <p><i class="fab fa-html5"></i> HTML</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 80%; animation: load90 1.5s ease-in-out forwards;">80%</div>
-                </div>
-                
-                <p><i class="fab fa-css3-alt"></i> CSS</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 80%; animation: load80 1.5s ease-in-out forwards;">80%</div>
-                </div>
-                
-                <p><i class="fab fa-js"></i> JavaScript</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 60%; animation: load75 1.5s ease-in-out forwards;">60%</div>
-                </div>
-                
-                <p><i class="fas fa-coffee"></i> Java</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 50%; animation: load70 1.5s ease-in-out forwards;">50%</div>
-                </div>
-                
-                <p><i class="fab fa-python"></i> Python</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 30%; animation: load65 1.5s ease-in-out forwards;">30%</div>
-                </div>
-                
-                <p><i class="fas fa-database"></i> SQL</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 20%; animation: load60 1.5s ease-in-out forwards;">20%</div>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-box about-description">
+                <p>
+                    Hi! I'm Rico Villamin, an enthusiastic web developer currently honing my craft at
+                    Mabini Colleges Daet. With 4 months of hands-on experience, I thrive on creating dynamic, user-friendly web applications. My specialties include 
+                    HTML, 
+                    CSS, 
+                    Java, 
+                    JavaScript, and 
+                    React, where I blend creativity and code to bring ideas to life.
+                </p>
+            </div>
+            <div class="about-box about-skills">
+                <h3>Skills</h3>
+                <div class="skills-list">
+                    <p><i class="fab fa-react"></i> React</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 70%; animation: load85 1.5s ease-in-out forwards;">70%</div>
+                    </div>
+                    <p><i class="fab fa-html5"></i> HTML</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%; animation: load90 1.5s ease-in-out forwards;">80%</div>
+                    </div>
+                    <p><i class="fab fa-css3-alt"></i> CSS</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%; animation: load80 1.5s ease-in-out forwards;">80%</div>
+                    </div>
+                    <p><i class="fab fa-js"></i> JavaScript</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%; animation: load75 1.5s ease-in-out forwards;">60%</div>
+                    </div>
+                    <p><i class="fas fa-coffee"></i> Java</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%; animation: load70 1.5s ease-in-out forwards;">50%</div>
+                    </div>
+                    <p><i class="fab fa-python"></i> Python</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%; animation: load65 1.5s ease-in-out forwards;">30%</div>
+                    </div>
+                    <p><i class="fas fa-database"></i> SQL</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 20%; animation: load60 1.5s ease-in-out forwards;">20%</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Certificates -->
     <section id="certificates" class="certificates">
@@ -331,17 +372,66 @@
 
         // Image enlargement functions
         function enlargeImage(img) {
-            var modal = document.getElementById("imageModal");
-            var modalImg = document.getElementById("enlargedImg");
-            modal.style.display = "flex"; /* Changed to flex for centering */
-            modalImg.src = img.src;
+            const modal = document.getElementById("imageModal");
+            const enlargedImg = document.getElementById("enlargedImg");
+            enlargedImg.src = img.src;
+            modal.style.display = "flex";
         }
 
         function closeImage() {
-            var modal = document.getElementById("imageModal");
+            const modal = document.getElementById("imageModal");
             modal.style.display = "none";
         }
+
+        // Navbar active link and section animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar nav ul li a');
+
+            // IntersectionObserver for section fade-in and active nav link
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add fade-in animation for section
+                        entry.target.classList.add('fade-in');
+
+                        // Update active nav link
+                        const sectionId = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            // Observe each section
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scrolling for nav links
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('href');
+                    document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+
+                    // Manually set active class on click
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Set initial active link (Home) on page load
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === '#hero') {
+                    link.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
-
 </html>
